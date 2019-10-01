@@ -1,0 +1,16 @@
+
+https://home.openweathermap.org/
+id 32e8821013bcd7e0a7418bdd28589135
+
+//
+ по локації
+https://samples.openweathermap.org/data/2.5/forecast?lat=49.254253&lon=34.033692&appid=32e8821013bcd7e0a7418bdd28589135
+
+49.254253
+34.033692
+//
+50.2700
+30.3125
+api.openweathermap.org/data/2.5/forecast?lat=35&lon=139
+
+http://api.openweathermap.org/data/2.5/forecast?lat=50.2700&lon=30.3125&APPID=32e8821013bcd7e0a7418bdd28589135

@@ -1,0 +1,37 @@
+.wrapp{
+    display: flex;
+    justify-content: space-between;
+}
+#city{
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    overflow: scroll;
+    border: 1px solid black;
+    display: none;
+    
+    
+}
+#city p{
+    cursor: pointer;
+}
+#city p.hide{
+    display: none;
+}
+#city p mark{
+    background-color:rgba(18, 131, 251, 0.75);
+    
+}
+#weather{
+    width: 300px;
+    background-color: #ffffff;
+    
+    border: 1px solid black;
+}
+
+/* content */
+
+.content {
+    text-align: center;
+    margin: auto;
+}
