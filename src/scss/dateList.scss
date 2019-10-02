@@ -45,11 +45,23 @@
     .slider{
         float: left;
 	    height: 100%;
-	    width: auto;
-     
+        width: auto;
+        margin-left: 5px;
+        text-align: center;
     }
+    
+
     tr{
         width: 50px;
-        padding: 2px;
+        padding: 5px;
     }
 }
+.headTable{
+ text-align: center;
+}
+.bg_active{
+        background-color: rgba(0,0,0,.5);
+    }
+.bg{
+        background-color: rgba(42, 39, 39, 0.377);
+    }

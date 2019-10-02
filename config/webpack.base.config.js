@@ -128,7 +128,7 @@ plugins: [
        test: /\.(jpe?g|png|gif|svg)$/i,
      }),
      new MomentLocalesPlugin({
-      localesToKeep: ['es-us', 'ru'],
+      localesToKeep: ['es-us', 'uk'],
      }),
     new webpack.ProvidePlugin ({
         $:'jquery',
