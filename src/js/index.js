@@ -5,6 +5,6 @@ import 'moment';
 
 import './jsfile/weather';
 import './jsfile/iduser';
-//import './jsfile/slick';
+import './jsfile/slick';
 ///import './jsfile/translator';
 

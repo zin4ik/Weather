@@ -1,7 +1,6 @@
 
 const moment = require("moment");
-
-moment.locale('ua');
+moment.locale('uk');
 
 $(document).ready(function () {
 
@@ -23,53 +22,47 @@ $(document).ready(function () {
 
                 $('.weather__list').append(dates__item);
             }
-            function AddTable(date) {
-
-
+            function AddTable(date,dayDate) {
                 $('.tables__weather').append(`<tbody class="tdody${date} slider">
-                <tr class="time">
-                  <th></th>  
+                <tr style="text-align:center">
+                <th colspan="8" class=headTable">${dayDate}</th>
+               </tr>
+                <tr class="time">  
                 </tr>
-                <tr class="sky">
-                  <td></td>              
+                <tr class="sky">              
                 </tr>
                 <tr class="temp">
-                    <td></td>
                 </tr>
                 <tr class="pressure">
-                    <td></td>
                 </tr>
                 <tr class="humidity">
-                    <td></td>
                 </tr>
                 <tr class="wind">
-                    <td></td>
                 </tr>
               </tbody>`);
 
             }
 
             function TableIns(date, dateOn, i) {
-
                 $(`.tdody${date} .time`).append('<th>' + dateOn.slice(10, -3) + '</th>');
 
                 $(`.tdody${date} .sky`).append('<td><img src="http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png"></td>');
                 $(`.tdody${date} .temp`).append('<td>' + Math.round(data.list[i].main.temp - 273) + '&#176;C</td>')
 
-                $(`.tdody${date} .wind`).append('<td>' + data.list[i].wind.speed + ' м/с</td>');
+                $(`.tdody${date} .wind`).append('<td>' + data.list[i].wind.speed + ' </td>');
                 $(`.tdody${date} .humidity`).append('<td>' + data.list[i].main.humidity + '%.</td>');
 
-                $(`.tdody${date} .pressure`).append('<td>' + Math.round(data.list[i].main.pressure / 1.33).toFixed(0) + ' мм рт.ст.</td>');
+                $(`.tdody${date} .pressure`).append('<td>' + Math.round(data.list[i].main.pressure / 1.33).toFixed(0) + '</td>');
             }
             /*===/AddDates(date)===*/
 
             let outList = '';
             // outList += 'Погода в ' + data.city.name +'<br>на: '+dataOn.slice(10,-3)+ '<br>';
-            let toDay = moment();
-            let day1 = moment().add(1, 'days').format('DD');
-            let day2 = moment().add(2, 'days').format('DD');
-            let day3 = moment().add(3, 'days').format('DD');
-            let day4 = moment().add(4, 'days').format('DD');
+            let toDay = moment().locale('uk');
+            let day1 = moment().add(1, 'days');
+            let day2 = moment().add(2, 'days');
+            let day3 = moment().add(3, 'days');
+            let day4 = moment().add(4, 'days');
 
             var indx = 0;
             for (let i = 0; i <= data.list.length - 1; i++) {
@@ -80,7 +73,7 @@ $(document).ready(function () {
                     if ($(`.dates__item${toDay.format('DD')}`).length === 0) {
                         AddDates(toDay.format('DD'), dateOn.slice(0, -8), indx);
                         indx++;
-                        AddTable(gDate);
+                        AddTable(gDate,toDay.format('DD/M'));
                         TableIns(gDate, dateOn, i);
 
                     }
@@ -90,10 +83,10 @@ $(document).ready(function () {
 
                 }
 
-                if (day1 == gDate) {
-                    if ($(`.dates__item${day1}`).length === 0) {
-                        AddDates(day1, dateOn.slice(0, -8), indx);
-                        AddTable(gDate);
+                if (day1.format('DD') == gDate) {
+                    if ($(`.dates__item${day1.format('DD')}`).length === 0) {
+                        AddDates(day1.format('DD'), dateOn.slice(0, -8), indx);
+                        AddTable(gDate,day1.format('DD/M'));
                         TableIns(gDate, dateOn, i);
                         indx++;
                     }
@@ -102,23 +95,10 @@ $(document).ready(function () {
                     }
 
                 }
-                if (day2 == gDate) {
-                    if ($(`.dates__item${day2}`).length === 0) {
-                        AddDates(day2, dateOn.slice(0, -8), indx);
-                        AddTable(gDate);
-                        TableIns(gDate, dateOn, i);
-                        indx++;
-                    }
-                    else {
-
-                        TableIns(gDate, dateOn, i);
-                    }
-
-                }
-                if (day3 == gDate) {
-                    if ($(`.dates__item${day3}`).length === 0) {
-                        AddDates(day3, dateOn.slice(0, -8), indx);
-                        AddTable(gDate);
+                if (day2.format('DD') == gDate) {
+                    if ($(`.dates__item${day2.format('DD')}`).length === 0) {
+                        AddDates(day2.format('DD'), dateOn.slice(0, -8), indx);
+                        AddTable(gDate,day2.format('DD/M'));
                         TableIns(gDate, dateOn, i);
                         indx++;
                     }
@@ -128,10 +108,23 @@ $(document).ready(function () {
                     }
 
                 }
-                if (day4 == gDate) {
-                    if ($(`.dates__item${day4}`).length === 0) {
-                        AddDates(day4, dateOn.slice(0, -8), indx);
-                        AddTable(gDate);
+                if (day3.format('DD') == gDate) {
+                    if ($(`.dates__item${day3.format('DD')}`).length === 0) {
+                        AddDates(day3.format('DD'), dateOn.slice(0, -8), indx);
+                        AddTable(gDate,day3.format('DD/M'));
+                        TableIns(gDate, dateOn, i);
+                        indx++;
+                    }
+                    else {
+
+                        TableIns(gDate, dateOn, i);
+                    }
+
+                }
+                if (day4.format('DD') == gDate) {
+                    if ($(`.dates__item${day4.format('DD')}`).length === 0) {
+                        AddDates(day4.format('DD'), dateOn.slice(0, -8), indx);
+                        AddTable(gDate,day4.format('DD/M'));
                         TableIns(gDate, dateOn, i);
 
                     }
@@ -144,39 +137,38 @@ $(document).ready(function () {
             }
             console.log(data);
             $('#weather').html(outList);
-            $('#carusel_block').css('width', '4000px')
+            $('#carusel_block').css('width', '4500px')
 
-            WidthCarusel();
-
+            
+/*=====func.slider on click=====*/
             $('.date').on('click', function () {
+                
                 let arrDate = $('.slider');
                 let inx = $(this).val();
                 let step = 0;
-                console.log(inx);
                 $.each(arrDate, function (i, value) {
                     if (i < inx) {
                         step += +($(value).width());
-                        console.log($(value).width());
-                        console.log(i + '-' + step);
                     }
                     else { false; }
-
+                WidthCarusel();
                 })
                 $('#carusel_block').css('left','-'+step+'px');
             });
+             
         })
 
-
-    /*====carusel Width======*/
+           
+/*====carusel Width======*/
     function WidthCarusel() {
         let arrDate = $('.slider');
         let inx = $('.slider').length;
-        let widthStep=5;
+        let widthStep=30;
         $.each(arrDate, function (i, value) {
             if (i <= inx) {
                 widthStep += +($(value).width());
-                console.log($(value).width());
-                console.log(i + '-' + widthStep);
+                // console.log($(value).width());
+                // console.log(i + '-' + widthStep);
             }
             else {
                 false;
