@@ -1,103 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather</title>
 
 
 </head>
+
 <body>
-    <header class="container">
-            <nav class="navbar navbar-expand-lg navbar-light opasity-block ">
-                    <h1 class="navbar-brand mt-1">Weather Forecast</h1>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active" value="">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                      </ul>
-                      
-                      <form class="form-inline my-2 my-lg-0">
-                          <select class="form-control mr-sm-2 country_select">
-                              <option disabled="true" selected="selected"> Оберіть Країну</option>
-                              <option value="UA" class="country">Україна</option>
-                              <option value="PL" class="country">Польша</option>
-                              <option value="RU" class="country">Росія</option>
-                          </select>
-                        <input class="form-control mr-sm-2" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
-                        
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-      
-                    </div>
-                  </nav>
-    </header>
-    <main class="container">
-        <div class="row flex">
-             <div id="city">
-            <em>You bet!</em>
-        </div>
-        </div>  <!--/row-->
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-light opasity-block ">
+      <h1 class="navbar-brand mt-1">Weather Forecast</h1>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-         
-       <div class="container">
-         <!-- block-result-1 -->
-         <div class="row weather">  
-           <div class="weather__list col-lg-10">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active" value="">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0">
+          <select class="form-control mr-sm-2 country_select">
+            <option disabled="true" selected="selected"> Оберіть Країну</option>
+            <option value="UA" class="country">Україна</option>
+            <option value="PL" class="country">Польша</option>
+            <option value="RU" class="country">Росія</option>
+          </select>
+          <input class="form-control mr-sm-2" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
+
+          <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="row flex">
+      <div id="city">
+        <em>You bet!</em>
+      </div>
+    </div>
+    <!--/row-->
+
+
+    <div class="container">
+      <!-- block-result-1 -->
+      <div class="row weather">
+        <div class="weather__list col-lg-10">
           <!-- <div class="date dates__item1 "></div> -->
-           </div><!-- /weather__list -->
-           </div>
-           <div class="row ">
-        <div class="row weather_block" id="carusel">
-          <table class="tables__weather dates__item1_table" id="carusel_block">
-          <!-- <tbody class="tdody1">
-            <tr class="time">
-              <th>Час</th>  
-            </tr>
-            <tr class="sky">
-              <td>Опади:<br></td>              
-            </tr>
-            <tr class="temp">
+        </div><!-- /weather__list -->
+      </div>
+      <div class="row ">
+        <table class="col-lg-1 col-md-1 description_table">
+            <tbody class="tdody1">
+                <tr>
+                    <th>Дата</th>
+                  </tr>
+              <tr class="time">
+                <th>Час</th>
+              </tr>
+              <tr  class="sky">
+                <td>Опади:</td>
+              </tr>
+              <tr class="temp">
                 <td>Температура:</td>
-            </tr>
-            <tr class="pressure">
-                <td>Тиск:</td>
-            </tr>
-            <tr class="humidity">
+              </tr>
+              <tr class="pressure">
+                <td>Тиск мм.рт.ст:</td>
+              </tr>
+              <tr class="humidity">
                 <td>Вологість:</td>
-            </tr>
-            <tr class="wind">
+              </tr>
+              <tr class="wind">
                 <td>Швидкість вітру:</td>
-            </tr>
-          </tbody> -->
+              </tr>
+            </tbody>
+          </table>
+        <div class="weather_block col-lg-10 col-md-10" id="carusel">
           
-        </table>
-       
-        </div><!-- /tables__weather -->
-         
-         </div>
+          <table class="tables__weather dates__item1_table" id="carusel_block">
 
-        <!-- /block-result-2 -->
-          <!-- <div class="weather_result">
+
+          </table>
+
+        </div><!-- /tables__weather -->
+
+      </div>
+
+      <!-- /block-result-2 -->
+      <!-- <div class="weather_result">
               <div id="weather">weather</div>
           </div> -->
 
-    </main>
-   <footer></footer>
+  </main>
+  <footer>Zin4&ko
+    <a href="tel:+380953826168">tel:+38(095)38-26-168</a>
+  </footer>
 
 
 
 </body>
+
 </html>

@@ -75,6 +75,21 @@ module.exports = {
             }
           ]
         },
+        {
+          test: /\.css$/i,
+          use: [  
+              'style-loader',
+              MiniCssExtractPlugin.loader,
+              {
+                loader: 'css-loader',
+                options: { sourceMap: true }
+              }, {
+                loader: 'postcss-loader',
+                options: { sourceMap: true, config: { path: `./postcss.config.js` } }
+              }
+            ]
+          },
+          { test: /\.txt$/, use: 'raw-loader' },
         
         {
           test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
