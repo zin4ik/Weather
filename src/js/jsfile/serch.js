@@ -44,7 +44,10 @@ jQuery(document).ready(function ($) {
 
             /*================= вивід даних =======================*/
             $('#city p').on('click', function () {
-                console.log($(this).attr('value'));
+                let el=$(this).text();
+                console.log(el)
+                $('#city_inpt').val(el);
+                $('#city_block').css('display','none');
                 $.get(
                     "http://api.openweathermap.org/data/2.5/forecast?",
                     {
