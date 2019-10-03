@@ -3,6 +3,8 @@ const moment = require("moment");
 moment.locale('uk');
 
 jQuery(document).ready(function ($) {
+    $('#city_inpt').val('');
+
     console.log("start");
     console.log("go");
     $.getJSON('./../json/city.json', function (data) {
@@ -10,7 +12,6 @@ jQuery(document).ready(function ($) {
         $('.country_select').on('change', function (el) {
 
             var el = $('.country_select option:selected').val();
-            console.log(el);
 
             var outList = '';
 
@@ -66,7 +67,7 @@ jQuery(document).ready(function ($) {
 
                         let outList = '';
                         console.log(data.city.name)
-                        // outList += 'Погода в ' + data.city.name +'<br>на: '+dataOn.slice(10,-3)+ '<br>';
+                        $('.cityName').text('Погода в ' + data.city.name);
                         let toDay = moment().locale('uk');
                         let day1 = moment().add(1, 'days');
                         let day2 = moment().add(2, 'days');
@@ -165,6 +166,7 @@ jQuery(document).ready(function ($) {
                     })
             
                        
+
             /*====carusel Width======*/
                 function WidthCarusel() {
                     let arrDate = $('.slider');
@@ -183,6 +185,7 @@ jQuery(document).ready(function ($) {
                     $('#carusel_block').css('width', widthStep + 'px')
                     console.log(widthStep + 'px');
                 };
+               
             })
         })
     })

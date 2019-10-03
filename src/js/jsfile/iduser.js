@@ -57,8 +57,7 @@ $(document).ready(function () {
             /*===/AddDates(date)===*/
 
             let outList = '';
-            
-            // outList += 'Погода в ' + data.city.name +'<br>на: '+dataOn.slice(10,-3)+ '<br>';
+            $('.cityName').text('Погода в ' + data.city.name);
             let toDay = moment().locale('uk');
             let day1 = moment().add(1, 'days');
             let day2 = moment().add(2, 'days');

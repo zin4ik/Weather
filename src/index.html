@@ -12,42 +12,25 @@
 
 <body>
   <header class="container">
-    <nav class="navbar navbar-expand-lg navbar-light opasity-block ">
-      <h1 class="navbar-brand mt-1">Weather Forecast</h1>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <!-- <ul class="navbar-nav mr-auto">
-          <li class="nav-item active" value="">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-          </li>
-        </ul> -->
-
-        <form class="form-inline my-2 my-lg-0">
-          <select class="form-control mr-sm-2 country_select">
+    <div class="row"> 
+      <h1 class="logo col-lg-5 col-md-5">Weather Forecast</h1>
+      <p class="cityName col-lg-5 col-md-5"></p>
+    </div>
+   
+      
+      
+  </header>
+  <main class="container">
+    <div class="row select_city">
+        <select class="country_select col-lg-2 col-md-3 border border-primary">
             <option disabled="true" selected="selected"> Оберіть Країну</option>
             <option value="UA" class="country">Україна</option>
             <option value="PL" class="country">Польша</option>
             <option value="RU" class="country">Росія</option>
           </select>
-          <input class="form-control mr-sm-2" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
+          <input class="city_input col-lg-5 col-md-5 border border-primary" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
 
-          <!-- <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button> -->
-        </form>
-
-      </div>
-    </nav>
-  </header>
-  <main class="container">
+    </div>
     <div class="row flex" id="city_block">
       <div id="city">
         <em>You bet!</em>
@@ -64,7 +47,7 @@
         </div><!-- /weather__list -->
       </div>
       <div class="row ">
-        <table class="col-lg-1 col-md-1 description_table">
+        <table class="col-lg-2 col-md-2 description_table">
             <tbody class="tdody1">
                 <tr>
                     <th>Дата</th>
@@ -89,7 +72,7 @@
               </tr>
             </tbody>
           </table>
-        <div class="weather_block col-lg-11 col-md-10" id="carusel">
+        <div class="weather_block col-lg-10 col-md-10" id="carusel">
           
           <table class="tables__weather dates__item1_table" id="carusel_block">
 

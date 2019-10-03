@@ -1,8 +1,10 @@
 @import'../bootstrap-castum/bootstrap-castum.scss';
-@import '~jquery-ui/themes/base/menu.scss';
-@import '~jquery-ui/themes/base/autocomplete.scss';
+
 @import './weater.scss';
 @import './dateList.scss';
+@import './header.css';
+@import './cityBlock.scss';
+
 body{
     background-image: url(/img/dayCloud.jpg);
     background-size: 100%;

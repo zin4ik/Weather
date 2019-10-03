@@ -5,4 +5,4 @@ import './../scss/footer.css';
 
 import './jsfile/iduser';
 import './jsfile/serch';
-
+import './jsfile/collaps';
