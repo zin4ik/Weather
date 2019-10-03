@@ -62,7 +62,7 @@ jQuery(document).ready(function ($) {
                         RemoveTeg();
 
                         let outList = '';
-
+                        console.log(data.city.name)
                         // outList += 'Погода в ' + data.city.name +'<br>на: '+dataOn.slice(10,-3)+ '<br>';
                         let toDay = moment().locale('uk');
                         let day1 = moment().add(1, 'days');
@@ -80,11 +80,11 @@ jQuery(document).ready(function ($) {
                                     AddDates(toDay.format('DD'), dateOn.slice(0, -8), indx);
                                     indx++;
                                     AddTable(gDate, toDay.format('DD/M'));
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
 
                                 }
                                 else {
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                 }
 
                             }
@@ -93,11 +93,11 @@ jQuery(document).ready(function ($) {
                                 if ($(`.dates__item${day1.format('DD')}`).length === 0) {
                                     AddDates(day1.format('DD'), dateOn.slice(0, -8), indx);
                                     AddTable(gDate, day1.format('DD/M'));
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                     indx++;
                                 }
                                 else {
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                 }
 
                             }
@@ -105,12 +105,12 @@ jQuery(document).ready(function ($) {
                                 if ($(`.dates__item${day2.format('DD')}`).length === 0) {
                                     AddDates(day2.format('DD'), dateOn.slice(0, -8), indx);
                                     AddTable(gDate, day2.format('DD/M'));
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                     indx++;
                                 }
                                 else {
 
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                 }
 
                             }
@@ -118,12 +118,12 @@ jQuery(document).ready(function ($) {
                                 if ($(`.dates__item${day3.format('DD')}`).length === 0) {
                                     AddDates(day3.format('DD'), dateOn.slice(0, -8), indx);
                                     AddTable(gDate, day3.format('DD/M'));
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                     indx++;
                                 }
                                 else {
 
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                 }
 
                             }
@@ -131,11 +131,11 @@ jQuery(document).ready(function ($) {
                                 if ($(`.dates__item${day4.format('DD')}`).length === 0) {
                                     AddDates(day4.format('DD'), dateOn.slice(0, -8), indx);
                                     AddTable(gDate, day4.format('DD/M'));
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
 
                                 }
                                 else {
-                                    TableIns(gDate, dateOn, i);
+                                    TableIns(gDate, dateOn, i,data);
                                 }
                             }
 
@@ -185,7 +185,6 @@ jQuery(document).ready(function ($) {
     })
 
 })
-
 
 /*========== search=========*/
 
