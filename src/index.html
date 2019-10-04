@@ -7,14 +7,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather</title>
 
-
 </head>
 
 <body>
+  <div class="bg_fon">
   <header class="container">
     <div class="row"> 
-      <h1 class="logo col-lg-5 col-md-5">Weather Forecast</h1>
-      <p class="cityName col-lg-5 col-md-5"></p>
+      <h1 class="logo col-lg-5 col-md-5 col-xs-4">Weather Forecast</h1>
+      <p class="cityName col-lg-5 col-md-5 col-xs-4"></p>
     </div>
    
       
@@ -22,13 +22,13 @@
   </header>
   <main class="container">
     <div class="row select_city">
-        <select class="country_select col-lg-2 col-md-3 border border-primary">
+        <select class="country_select col-lg-2 col-md-3 col-sm-6 border border-primary">
             <option disabled="true" selected="selected"> Оберіть Країну</option>
             <option value="UA" class="country">Україна</option>
             <option value="PL" class="country">Польша</option>
             <option value="RU" class="country">Росія</option>
           </select>
-          <input class="city_input col-lg-5 col-md-5 border border-primary" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
+          <input class="city_input col-lg-5 col-md-5 col-sm-6 border border-primary" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
 
     </div>
     <div class="row flex" id="city_block">
@@ -42,8 +42,8 @@
     <div class="container">
       <!-- block-result-1 -->
       <div class="row weather">
-        <div class="weather__list col-lg-12">
-          <!-- <div class="date dates__item1 "></div> -->
+        <div class="weather__list col-lg-12 col-sm-12">
+         
         </div><!-- /weather__list -->
       </div>
       <div class="row ">
@@ -62,13 +62,13 @@
                 <td>Температура:</td>
               </tr>
               <tr class="pressure">
-                <td>Тиск мм.рт.ст:</td>
+                <td>Тиск мм.:</td>
               </tr>
               <tr class="humidity">
                 <td>Вологість:</td>
               </tr>
               <tr class="wind">
-                <td>Швидкість вітру:</td>
+                <td>Вітер м/с:</td>
               </tr>
             </tbody>
           </table>
@@ -89,6 +89,7 @@
           </div> -->
 
   </main>
+  </div>  <!-- /bg_fon -->
   <footer>Zin4&ko
     <a href="tel:+380953826168">tel:+38(095)38-26-168</a>
   </footer>

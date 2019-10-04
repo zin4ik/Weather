@@ -9,8 +9,8 @@ $(document).ready(function () {
         // "http://api.openweathermap.org/data/2.5/weather?",
         {
             // id:"707860",
-            lat: "49,0850",
-            lon: "34,1157",
+            lat: "50.4333",
+            lon: "30.5167",
 
             appid: "32e8821013bcd7e0a7418bdd28589135"
         },

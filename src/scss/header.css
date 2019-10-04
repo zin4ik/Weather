@@ -3,7 +3,7 @@ header{
     flex-flow: row nowrap;
     justify-content: space-between;
     width: 100%;
-    background-color: hsla(211, 92%, 24%, 0.7);
+    background-color: rgba(5,59,118, 0.7);
     padding: 10px;
     color: white;
     margin-bottom: 15px;

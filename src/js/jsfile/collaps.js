@@ -14,4 +14,11 @@ $(document).ready(function(){
                         top=0;
                         left=0;
                     }); 
+                    $('#city_inpt').focus(function() {
+                        $('#city_block').css('display','block');
+                    });
+                    // $('#city_inpt').focusout(function() {
+                    //     $('#city_block').css('display','none');
+                    // });
+
 })
