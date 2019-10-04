@@ -1,81 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather</title>
-<link href="/css/main.e64ae7f3a7fdde6619c1.css" rel="stylesheet"></head>
-<body>
-    <header class="container">
-            <nav class="navbar navbar-expand-lg navbar-light opasity-block ">
-                    <h1 class="navbar-brand mt-1">Weather Forecast</h1>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button>
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                        </li>
-                      </ul>
-                      <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
-                      </form>
-                    </div>
-                  </nav>
-    </header>
-    <main class="container">
-        <div class="row">
-                <p>
-                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                          Пошук на карті
-                </button>
-                </p>
-            <div class="collapse" id="collapseExample">
-                <div class="card card-body p-1">
-                    <!--Google map-->
-                    <div id="map-container-google-3" class="z-depth-1-half map-container-3">
-                        <iframe src="https://maps.google.com/maps?q=warsaw&t=k&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
-                            style="border:0" allowfullscreen></iframe>
-                    </div>  <!--/Google map-->
-                </div> <!--/card-body -->
-            </div> <!--/collapse -->
-        </div>  <!--/row-->
 
-        <div class="wrapp">
-          <div class="sel_country">
-              <label for="">Країна</label>
-              <select class="country_select">
-                  <option disabled="true" selected="selected"> Оберіть Країну</option>
-                  <option value="UA" class="country">Україна</option>
-                  <option value="PL" class="country">Польша</option>
-                  <option value="RU" class="country">Росія</option>
-              </select>
-              <label for="tags">Місто</label>
-              <input type="text" name="city_inpt" value="" id="city_inpt"/>
-              <!-- <button id="sort">Від А до Я</button> -->
-              <div id="city">
-                  <em>You bet!</em>
-              </div>
-             
-          </div>
-          <!--/sel_country-->
-          <div class="weather_result">
-              <div id="weather">weather</div>
-          </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather</title>
+
+<link href="/css/main.74c4fff7209d80724839.css" rel="stylesheet"></head>
+
+<body>
+  <div class="bg_fon">
+  <header class="container">
+    <div class="row"> 
+      <h1 class="logo col-lg-5 col-md-5 col-xs-4">Weather Forecast</h1>
+      <p class="cityName col-lg-5 col-md-5 col-xs-4"></p>
+    </div>
+   
+      
+      
+  </header>
+  <main class="container">
+    <div class="row select_city">
+        <select class="country_select col-lg-2 col-md-3 col-sm-6 border border-primary">
+            <option disabled="true" selected="selected"> Оберіть Країну</option>
+            <option value="UA" class="country">Україна</option>
+            <option value="PL" class="country">Польша</option>
+            <option value="RU" class="country">Росія</option>
+          </select>
+          <input class="city_input col-lg-5 col-md-5 col-sm-6 border border-primary" id="city_inpt" type="search" placeholder="Search" aria-label="Search">
+
+    </div>
+    <div class="row flex" id="city_block">
+      <div id="city">
+        <em>You bet!</em>
       </div>
-      <!--/wrapp-->
-    </main>
-   <footer></footer>
-  
-<script type="text/javascript" src="/js/vendors.e64ae7f3a7fdde6619c1.js"></script><script type="text/javascript" src="/js/main.e64ae7f3a7fdde6619c1.js"></script></body>
+    </div>
+    <!--/row-->
+
+
+    <div class="container">
+      <!-- block-result-1 -->
+      <div class="row weather">
+        <div class="weather__list col-lg-12 col-sm-12">
+         
+        </div><!-- /weather__list -->
+      </div>
+      <div class="row ">
+        <table class="col-lg-2 col-md-2 description_table">
+            <tbody class="tdody1">
+                <tr>
+                    <th>Дата</th>
+                  </tr>
+              <tr class="time">
+                <th>Час</th>
+              </tr>
+              <tr  class="sky">
+                <td>Опади:</td>
+              </tr>
+              <tr class="temp">
+                <td>Температура:</td>
+              </tr>
+              <tr class="pressure">
+                <td>Тиск мм.:</td>
+              </tr>
+              <tr class="humidity">
+                <td>Вологість:</td>
+              </tr>
+              <tr class="wind">
+                <td>Вітер м/с:</td>
+              </tr>
+            </tbody>
+          </table>
+        <div class="weather_block col-lg-10 col-md-10" id="carusel">
+          
+          <table class="tables__weather dates__item1_table" id="carusel_block">
+
+
+          </table>
+
+        </div><!-- /tables__weather -->
+
+      </div>
+
+      <!-- /block-result-2 -->
+      <!-- <div class="weather_result">
+              <div id="weather">weather</div>
+          </div> -->
+
+  </main>
+  </div>  <!-- /bg_fon -->
+  <footer>Zin4&ko
+    <a href="tel:+380953826168">tel:+38(095)38-26-168</a>
+  </footer>
+
+
+
+<script type="text/javascript" src="/js/vendors.74c4fff7209d80724839.js"></script><script type="text/javascript" src="/js/main.74c4fff7209d80724839.js"></script></body>
+
 </html>
