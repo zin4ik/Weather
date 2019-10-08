@@ -5,8 +5,8 @@ moment.locale('uk');
 $(document).ready(function () {
 
     $.get(
-        "http://api.openweathermap.org/data/2.5/forecast?",
-        // "http://api.openweathermap.org/data/2.5/weather?",
+        "https://api.openweathermap.org/data/2.5/forecast?",
+        // "https://api.openweathermap.org/data/2.5/weather?",
         {
             // id:"707860",
             lat: "50.4333",
@@ -46,7 +46,7 @@ $(document).ready(function () {
            window.TableIns=function (date, dateOn, i,getData) {
                 $(`.tdody${date} .time`).append('<th>' + dateOn.slice(10, -3) + '</th>');
 
-                $(`.tdody${date} .sky`).append('<td><img src="http://openweathermap.org/img/w/' + getData.list[i].weather[0].icon + '.png"></td>');
+                $(`.tdody${date} .sky`).append('<td><img src="https://openweathermap.org/img/w/' + getData.list[i].weather[0].icon + '.png"></td>');
                 $(`.tdody${date} .temp`).append('<td>' + Math.round(getData.list[i].main.temp - 273) + '&#176;C</td>')
 
                 $(`.tdody${date} .wind`).append('<td>' + getData.list[i].wind.speed + ' </td>');

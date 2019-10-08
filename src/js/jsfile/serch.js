@@ -4,6 +4,7 @@ moment.locale('uk');
 
 jQuery(document).ready(function ($) {
     $('#city_inpt').val('');
+    $('.country_select').val('selected');
 
     console.log("start");
     console.log("go");
@@ -50,7 +51,7 @@ jQuery(document).ready(function ($) {
                 $('#city_inpt').val(el);
                 $('#city_block').css('display','none');
                 $.get(
-                    "http://api.openweathermap.org/data/2.5/forecast?",
+                    "https://api.openweathermap.org/data/2.5/forecast?",
                     {
                         id: $(this).attr('value'),
                         appid: "32e8821013bcd7e0a7418bdd28589135"
@@ -142,8 +143,6 @@ jQuery(document).ready(function ($) {
                                     TableIns(gDate, dateOn, i,data);
                                 }
                             }
-
-
                         }
                     
                         $('#weather').html(outList);
@@ -164,14 +163,12 @@ jQuery(document).ready(function ($) {
                         });
                          
                     })
-            
-                       
 
             /*====carusel Width======*/
                 function WidthCarusel() {
                     let arrDate = $('.slider');
                     let inx = $('.slider').length;
-                    let widthStep=30;
+                    let widthStep=5;
                     $.each(arrDate, function (i, value) {
                         if (i <= inx) {
                             widthStep += +($(value).width());
